@@ -140,6 +140,9 @@ python scripts/06_apply_models_to_yearly_stacks.py
 ```
 
 ## 📁 Data & Results Organization
+Since raw rasters and outputs are large, they are **not stored in this repo**.  
+Organize your local project like this:
+
 ```
 data/
   ├── s1_features/
@@ -153,6 +156,8 @@ results/
   ├── predictions/
   └── figures/
 ```
+⚠️ Note: `.gitignore` excludes these outputs so they don’t get pushed to GitHub.
+---
 
 ## 📊 Outputs
 - Yearly prediction maps ```(.tif)```
