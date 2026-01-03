@@ -13,12 +13,14 @@
  * "Sentinel-1 SAR Backscatter Analysis Ready Data Preparation in Google Earth Engine"
  * Remote Sensing 13(10), 1954. doi:10.3390/rs13101954
  *
- * Original Refined-Lee implementation:
+ * Original implementation:
  * https://github.com/adugnag/gee_s1_ard
  *
- * Filter structure and directional statistics follow the ARD reference,
- * with modifications for WPE context, band handling, and gamma-0 workflow.
+ * The incidence-angle masking concept follows the ARD workflow,
+ * with modifications for floodplain-specific thresholds and integration
+ * into a modular processing pipeline.
  */
+
 
 /**
  * Masks pixels based on the 'angle' band to remove swath edge artifacts.
