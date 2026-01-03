@@ -86,6 +86,9 @@ Mosaics tiles, clips wetlands, fixes band names.
 python scripts/01_extract_training_features.py
 ```
 Produces LOPO-ready tables.
+```
+s1_features_all_LOPO.xlsx
+```
 
 4️⃣ **Feature ablation & model benchmarking**
 ```bash
@@ -109,11 +112,17 @@ Across **RF / SVM / XGB**.
 ```bash
 python scripts/03_feature_importance_shap.py
 ```
+Outputs ranking of most important SAR features.
 
 6️⃣ **Train final mapping models**
 ```bash
 python scripts/04_train_final_models_for_mapping.py
 ```
+Saves:
+
+- trained RF / SVM / XGB models
+
+- JSON feature schema (band order safety)
 
 7️⃣ **Build yearly stacks**
 ```bash
@@ -121,6 +130,12 @@ python scripts/05_build_yearly_stacks.py
 ```
 Creates stack for:
 - 2025
+```
+P1ANAE_YEARLY_2025_STACK.tif
+```
+
+...
+
 
 8️⃣ Wall-to-wall mapping  
 ```bash
@@ -140,3 +155,13 @@ results/
   ├── predictions/
   └── figures/
 
+## 📊 Outputs
+- Yearly prediction maps ```(.tif)```
+
+- Feature tables (Excel)
+
+- SHAP importance figures
+
+- Model accuracy summaries
+
+- Wall-to-wall maps
