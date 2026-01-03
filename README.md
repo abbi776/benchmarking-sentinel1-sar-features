@@ -1,8 +1,8 @@
-# Benchmarking Sentinel-1 SAR Features for Woody Plant Encroachment Mapping
+# 🌳 Benchmarking Sentinel-1 SAR Features for Woody Plant Encroachment Mapping
 
 Open-source framework for benchmarking Sentinel-1 SAR features and applying them to woody plant encroachment (WPE) mapping in floodplain wetlands using **multi-seasonal SAR backscatter, polarization indices, texture features, and machine learning (RF, SVM, XGBoost)**.
 
-This repository contains all the scripts, environment requirements, and instructions needed to reproduce the analysis — from preprocessing Sentinel-1 data in Google Earth Engine to generating interpretable wall-to-wall classification maps.
+This repository contains all the scripts, environment requirements, and instructions needed to reproduce the analysis, from preprocessing Sentinel-1 data in Google Earth Engine to generating interpretable wall-to-wall classification maps.
 
 ---
 
@@ -23,7 +23,7 @@ This repository contains all the scripts, environment requirements, and instruct
 ```
 benchmarking-sentinel1-sar-features/
 │
-├── gee/                         
+├── gee/                         # GEE SAR preprocessing + feature scripts
 │   ├── 00_utils_sar.js
 │   ├── 01_border_noise.js
 │   ├── 02_speckle_filter.js
@@ -31,7 +31,7 @@ benchmarking-sentinel1-sar-features/
 │   ├── 04_feature_extraction.js
 │   └── main_workflow.js
 │
-├── scripts/                     
+├── scripts/                    # Python analysis pipeline 
 │   ├── 00_prepare_feature_rasters.py
 │   ├── 01_extract_training_features.py
 │   ├── 02_model_ablation_experiments.py
@@ -62,7 +62,7 @@ pip install -r requirements.txt
 ## 🚀 Pipeline Steps
 1️⃣ Sentinel-1 preprocessing (Google Earth Engine)
 
-Run scripts inside /gee in order:
+Run scripts inside ```bash/gee``` in order:
 - Utilities
 - Border-noise masking
 - Refined Lee speckle filter
@@ -100,3 +100,39 @@ Benchmarks:
 - full stack
 
 Across **RF / SVM / XGB**.
+
+5️⃣ SHAP feature importance
+```bash
+python scripts/03_feature_importance_shap.py
+```
+
+6️⃣ Train final mapping models
+```bash
+python scripts/04_train_final_models_for_mapping.py
+```
+
+7️⃣ Build yearly stacks
+```bash
+python scripts/05_build_yearly_stacks.py
+```
+Creates stack for:
+- 2025
+
+8️⃣ Wall-to-wall mapping  
+```bash
+python scripts/06_apply_models_to_yearly_stacks.py
+```
+
+## 📁 Data & Results Organization
+data/
+  ├── s1_features/
+  ├── wetlands/
+  ├── labels/
+  └── yearly_stacks/
+
+results/
+  ├── models/
+  ├── shap/
+  ├── predictions/
+  └── figures/
+
