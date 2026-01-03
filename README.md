@@ -85,7 +85,7 @@ python scripts/01_extract_training_features.py
 ```
 Produces LORO-ready tables.
 ```
-s1_features_all_LOPO.xlsx
+s1_features_all_LORO.xlsx
 ```
 
 4️⃣ **Feature ablation & model benchmarking**
