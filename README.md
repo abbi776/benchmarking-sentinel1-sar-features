@@ -14,9 +14,6 @@ This repository contains all the scripts, environment requirements, and instruct
 - **Explainable AI:** Global feature importance analysis using SHAP (TreeExplainer).
 - **Wall-to-Wall Mapping:** Scalable pixel-wise classification for floodplain monitoring (2025).
 
-> **Note:** The sentinel-1 preprocessing workflow builds upon the **Sentinel-1 SAR Backscatter Analysis Ready Data (ARD)** framework by Mullissa et al. (2021).  
-> *Reference:* [https://github.com/adugnag/gee_s1_ard](https://github.com/adugnag/gee_s1_ard)
-
 ---
 
 ## 📂 Repository Structure
@@ -173,3 +170,23 @@ results/
 Portions of SAR preprocessing draw on concepts from:
 > **Sentinel-1 SAR Backscatter Analysis Ready Data (ARD)** framework by Mullissa et al. (2021). [https://doi.org/10.3390/rs13101954](https://doi.org/10.3390/rs13101954)   
 > *Original repository:* [https://github.com/adugnag/gee_s1_ard](https://github.com/adugnag/gee_s1_ard)
+
+## 🧑‍🤝‍🧑 Contributing
+**Pull requests and suggestions are welcome.**
+Areas that would particularly benefit from contributions include:
+
+- Expanding the workflow to additional wetlands and floodplain systems
+- Adding new SAR texture and polarization feature formulations
+- Exploring deep learning approaches for classification and feature fusion
+- Evaluating transferability through cross-site benchmarking and replication studies
+
+## 📜 License
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 📧 Contact
+For questions or collaboration:  
+**Abdullah Toqeer**  
+PhD Candidate, Charles Sturt University  
+Email: *toqeerabdullah776@gmail.com*  
