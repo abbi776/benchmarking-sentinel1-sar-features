@@ -157,7 +157,7 @@ results/
   └── figures/
 ```
 ⚠️ Note: `.gitignore` excludes these outputs so they don’t get pushed to GitHub.
----
+
 
 ## 📊 Outputs
 - Yearly prediction maps ```(.tif)```
