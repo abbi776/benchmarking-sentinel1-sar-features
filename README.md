@@ -82,7 +82,7 @@ Mosaics tiles, clips wetlands, fixes band names.
 ```bash
 python scripts/01_extract_training_features.py
 ```
-Produces LOPO-ready tables.
+Produces LORO-ready tables.
 ```
 s1_features_all_LOPO.xlsx
 ```
