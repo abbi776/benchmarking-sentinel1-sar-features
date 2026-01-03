@@ -42,6 +42,7 @@ benchmarking-sentinel1-sar-features/
 ├── .gitignore
 └── README.md
 ```
+---
 
 ## ⚙️ Installation
 ```bash
@@ -136,6 +137,7 @@ P1ANAE_YEARLY_2025_STACK.tif
 ```bash
 python scripts/06_apply_models_to_yearly_stacks.py
 ```
+---
 
 ## 📁 Data & Results Organization
 Since raw rasters and outputs are large, they are **not stored in this repo**.  
@@ -156,6 +158,7 @@ results/
 ```
 ⚠️ Note: `.gitignore` excludes these outputs so they don’t get pushed to GitHub.
 
+---
 
 ## 📊 Outputs
 - Yearly prediction maps ```(.tif)```
@@ -167,12 +170,15 @@ results/
 - Model accuracy summaries
 
 - Wall-to-wall maps
+---
 
 
 ## 🙏 Attribution & Credits
 Portions of SAR preprocessing draw on concepts from:
 > **Sentinel-1 SAR Backscatter Analysis Ready Data (ARD)** framework by Mullissa et al. (2021). [https://doi.org/10.3390/rs13101954](https://doi.org/10.3390/rs13101954)   
 > *Original repository:* [https://github.com/adugnag/gee_s1_ard](https://github.com/adugnag/gee_s1_ard)
+
+---
 
 ## 🧑‍🤝‍🧑 Contributing
 **Pull requests and suggestions are welcome.**
@@ -182,6 +188,8 @@ Areas that would particularly benefit from contributions include:
 - Adding new SAR texture and polarization feature formulations
 - Exploring deep learning approaches for classification and feature fusion
 - Evaluating transferability through cross-site benchmarking and replication studies
+
+---
 
 ## 📜 License
 This project is licensed under the [MIT License](LICENSE).
