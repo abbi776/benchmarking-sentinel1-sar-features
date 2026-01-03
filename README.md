@@ -98,13 +98,13 @@ Benchmarks:
 
 - VV/VH only
 
-- indices only
+- Indices only
 
-- textures only
+- Textures only
 
-- combined sets
+- Combined sets
 
-- full stack
+- Full stack
 
 Across **RF / SVM / XGB**.
 
@@ -165,3 +165,9 @@ results/
 - Model accuracy summaries
 
 - Wall-to-wall maps
+
+
+## 🙏 Attribution & Credits
+Portions of SAR preprocessing draw on concepts from:
+**Sentinel-1 SAR Backscatter Analysis Ready Data (ARD)** framework by Mullissa et al. (2021).  
+> *Reference:* [https://github.com/adugnag/gee_s1_ard](https://github.com/adugnag/gee_s1_ard)
