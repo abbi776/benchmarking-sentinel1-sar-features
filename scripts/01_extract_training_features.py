@@ -4,7 +4,7 @@
 
 Polygon-based Sentinel-1 SAR feature extraction.
 
-Creates a single feature table (LOPO-ready) with:
+Creates a single feature table (LORO-ready) with:
 - unique_id
 - class labels
 - seasonal Sentinel-1 features
