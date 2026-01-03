@@ -131,8 +131,6 @@ Creates stack for:
 P1ANAE_YEARLY_2025_STACK.tif
 ```
 
-...
-
 
 8️⃣ Wall-to-wall mapping  
 ```bash
