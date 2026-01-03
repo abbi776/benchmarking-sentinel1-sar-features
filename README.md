@@ -1,37 +1,6 @@
 # 🌳 Benchmarking Sentinel-1 SAR Features for Woody Plant Encroachment Mapping
 
-This repository provides an open-source, end-to-end framework for benchmarking Sentinel-1 SAR features and applying them to woody plant encroachment (WPE) mapping in floodplain wetlands.
-
-The workflow integrates:
-
-- Google Earth Engine (Sentinel-1 preprocessing & feature generation)
-- Polarisation indices and SAR backscatter transformations
-- GLCM texture metrics
-- Machine learning (Random Forest, SVM, XGBoost)
-- Spatial cross-validation (Leave-One-Polygon-Out)
-- SHAP model interpretability
-- Wall-to-wall mapping across multiple years
-
-The goal is to evaluate which SAR feature groups best discriminate woody vegetation in floodplain environments.
-
----
-
-## 🌱 Key Highlights
-
-- GEE Sentinel-1 preprocessing (border noise masking, speckle filtering, ellipsoidal RTC)
-- Unified SAR feature stack (indices + textures)
-- Polygon-based feature extraction
-- Structured feature ablation experiments
-- RF vs SVM vs XGB benchmarking
-- SHAP interpretability
-- Wall-to-wall classification (2016 / 2018 / 2025)
-- Reproducible, script-driven workflow
-
-> Parts of the preprocessing pipeline build upon  
-> **Mullissa et al. (2021) – Sentinel-1 ARD (GEE)**  
-> https://github.com/adugnag/gee_s1_ard  
->  
-> Proper credit is provided inside relevant scripts.
+Open-source framework for benchmarking Sentinel-1 SAR features and applying them to woody plant encroachment (WPE) mapping in floodplain wetlands.
 
 ---
 
@@ -59,9 +28,10 @@ benchmarking-sentinel1-sar-features/
 │
 ├── requirements.txt
 ├── LICENSE
-├── .gitignore
+└── README.md
 
 ⚙️ Installation (Python)
+
 git clone https://github.com/YOURNAME/benchmarking-sentinel1-sar-features.git
 cd benchmarking-sentinel1-sar-features
 
@@ -70,5 +40,3 @@ source venv/bin/activate        # Linux/Mac
 venv\Scripts\activate           # Windows
 
 pip install -r requirements.txt
-
-└── README.md
