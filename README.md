@@ -76,3 +76,27 @@ Run scripts inside /gee in order:
 ```bash
 python scripts/00_prepare_feature_rasters.py
 ```
+
+3️⃣ Extract polygon training features
+```bash
+python scripts/01_extract_training_features.py
+```
+Produces LOPO-ready tables.
+
+4️⃣ Feature ablation & model benchmarking
+```bash
+python scripts/02_model_ablation_experiments.py
+```
+Benchmarks:
+
+- VV/VH only
+
+- indices only
+
+- textures only
+
+- combined sets
+
+- full stack
+
+Across **RF / SVM / XGB**.
