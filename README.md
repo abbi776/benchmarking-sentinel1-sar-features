@@ -1,68 +1,69 @@
-🌳 Benchmarking Sentinel-1 SAR Features for Woody Plant Encroachment Mapping
+# 🌳 Benchmarking Sentinel-1 SAR Features for Woody Plant Encroachment Mapping
 
 This repository provides an open-source, end-to-end framework for benchmarking Sentinel-1 SAR features and applying them to woody plant encroachment (WPE) mapping in floodplain wetlands.
 
 The workflow integrates:
 
-Google Earth Engine (Sentinel-1 preprocessing & feature generation)
-
-Polarisation indices + SAR backscatter transformations
-
-GLCM texture metrics
-
-Machine learning (RF, SVM, XGBoost)
-
-Spatial cross-validation (Leave-One-Polygon-Out)
-
-Model interpretability (SHAP)
-
-Wall-to-wall mapping across multiple years
+- Google Earth Engine (Sentinel-1 preprocessing & feature generation)
+- Polarisation indices and SAR backscatter transformations
+- GLCM texture metrics
+- Machine learning (Random Forest, SVM, XGBoost)
+- Spatial cross-validation (Leave-One-Polygon-Out)
+- Model interpretability using SHAP
+- Wall-to-wall mapping across multiple years
 
 The goal is to evaluate which SAR feature groups provide the strongest discriminatory power for floodplain woody vegetation.
 
-🌱 Key Highlights
+---
 
-✔️ GEE Sentinel-1 preprocessing (border noise masking, speckle filtering, ellipsoidal RTC)
-✔️ Unified SAR feature stack (indices + textures)
-✔️ Polygon-based feature extraction for ML
-✔️ Structured feature ablation experiments
-✔️ Model comparison (RF, SVM, XGB)
-✔️ Global SHAP interpretability
-✔️ Wall-to-wall classification (2016 / 2018 / 2025)
-✔️ Reproducible, script-driven workflow
+## 🌱 Key Highlights
 
-Parts of the preprocessing pipeline build upon:
-Mullissa et al. (2021) – Sentinel-1 ARD in GEE
-https://github.com/adugnag/gee_s1_ard
+✔️ GEE Sentinel-1 preprocessing (border noise masking, speckle filtering, ellipsoidal RTC)  
+✔️ Unified SAR feature stack (indices + textures)  
+✔️ Polygon-based feature extraction for ML  
+✔️ Structured feature ablation experiments  
+✔️ Model comparison (RF, SVM, XGB)  
+✔️ Global SHAP interpretability  
+✔️ Wall-to-wall classification (2016 / 2018 / 2025)  
+✔️ Reproducible, script-driven workflow  
 
-Proper credit is attributed inside relevant scripts.
+> Parts of the preprocessing pipeline build upon:  
+> Mullissa et al. (2021) – Sentinel-1 ARD in GEE  
+> https://github.com/adugnag/gee_s1_ard  
+>  
+> Proper credit is attributed inside relevant scripts.
 
-📂 Repository Structure
+---
 benchmarking-sentinel1-sar-features/
 │
-├── gee/                         # GEE SAR preprocessing + feature scripts
-│   ├── 00_utils_sar.js
-│   ├── 01_border_noise.js
-│   ├── 02_speckle_filter.js
-│   ├── 03_rtc.js
-│   ├── 04_feature_extraction.js
-│   └── main_workflow.js
+├── gee/ # GEE SAR preprocessing + feature scripts
+│ ├── 00_utils_sar.js
+│ ├── 01_border_noise.js
+│ ├── 02_speckle_filter.js
+│ ├── 03_rtc.js
+│ ├── 04_feature_extraction.js
+│ └── main_workflow.js
 │
-├── scripts/                     # Python analysis pipeline (numbered)
-│   ├── 00_prepare_feature_rasters.py
-│   ├── 01_extract_training_features.py
-│   ├── 02_model_ablation_experiments.py
-│   ├── 03_feature_importance_shap.py
-│   ├── 04_train_final_models_for_mapping.py
-│   ├── 05_build_yearly_stacks.py
-│   └── 06_apply_models_to_yearly_stacks.py
+├── scripts/ # Python analysis pipeline (numbered)
+│ ├── 00_prepare_feature_rasters.py
+│ ├── 01_extract_training_features.py
+│ ├── 02_model_ablation_experiments.py
+│ ├── 03_feature_importance_shap.py
+│ ├── 04_train_final_models_for_mapping.py
+│ ├── 05_build_yearly_stacks.py
+│ └── 06_apply_models_to_yearly_stacks.py
 │
 ├── requirements.txt
 ├── LICENSE
 ├── .gitignore
 └── README.md
 
-⚙️ Installation (Python)
+
+---
+
+## ⚙️ Installation (Python)
+
+```bash
 git clone https://github.com/YOURNAME/benchmarking-sentinel1-sar-features.git
 cd benchmarking-sentinel1-sar-features
 
@@ -75,9 +76,9 @@ pip install -r requirements.txt
 🚀 Workflow Overview
 1️⃣ Sentinel-1 preprocessing (Google Earth Engine)
 
-Run the scripts inside /gee in order:
+Run scripts in /gee in order:
 
-Utilities + conversions
+Utilities & conversions
 
 Border noise masking
 
@@ -90,6 +91,13 @@ SAR indices + GLCM textures
 Export seasonal feature mosaics
 
 Output: multi-band seasonal SAR feature rasters.
+
+
+2️⃣ Prepare feature rasters
+python scripts/00_prepare_feature_rasters.py
+
+
+Mosaics, clip wetlands, fix band labels.
 
 2️⃣ Prepare feature rasters
 python scripts/00_prepare_feature_rasters.py
@@ -167,9 +175,9 @@ Classified woody vegetation maps per wetland & year.
 
 📁 Data Organization
 
-Because Sentinel-1 rasters are large, they are not stored in this repo.
+Large Sentinel-1 rasters are not stored in the repo.
 
-Suggested layout:
+Recommended structure:
 
 data/
   ├── s1_features/
@@ -182,21 +190,19 @@ results/
   ├── shap/
   ├── predictions/
   └── figures/
-
-
 .gitignore prevents large rasters from uploading.
 
 🙌 Attribution
 
 If you use or adapt this workflow, please cite:
 
-Mullissa et al. (2021). Sentinel-1 ARD in Google Earth Engine
+Mullissa et al. (2021) – Sentinel-1 ARD in Google Earth Engine
 
-And this repository (once published in your paper).
+This repository (once published)
 
 🧑‍🤝‍🧑 Contributing
 
-Pull requests welcome — especially improvements to:
+Pull requests are welcome — especially improvements related to:
 
 SAR feature engineering
 
@@ -213,3 +219,7 @@ This project is licensed under the MIT License.
 Abdullah Toqeer
 PhD Candidate — Charles Sturt University
 📩 toqeerabdullah776@gmail.com
+
+
+## 📂 Repository Structure
+
