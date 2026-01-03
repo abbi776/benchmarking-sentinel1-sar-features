@@ -143,6 +143,7 @@ python scripts/06_apply_models_to_yearly_stacks.py
 ```
 
 ## 📁 Data & Results Organization
+```
 data/
   ├── s1_features/
   ├── wetlands/
@@ -154,6 +155,7 @@ results/
   ├── shap/
   ├── predictions/
   └── figures/
+```
 
 ## 📊 Outputs
 - Yearly prediction maps ```(.tif)```
@@ -170,4 +172,4 @@ results/
 ## 🙏 Attribution & Credits
 Portions of SAR preprocessing draw on concepts from:
 > **Sentinel-1 SAR Backscatter Analysis Ready Data (ARD)** framework by Mullissa et al. (2021).  
-> *Reference:* [https://github.com/adugnag/gee_s1_ard](https://github.com/adugnag/gee_s1_ard)
+> *Original repository:* [https://github.com/adugnag/gee_s1_ard](https://github.com/adugnag/gee_s1_ard)
