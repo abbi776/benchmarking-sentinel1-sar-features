@@ -63,22 +63,16 @@ pip install -r requirements.txt
 1️⃣ Sentinel-1 preprocessing (Google Earth Engine)
 
 Run scripts inside /gee in order:
+- Utilities
+- Border-noise masking
+- Refined Lee speckle filter
+- Ellipsoidal RTC
+- SAR indices + GLCM textures
+- Export seasonal mosaics
 
-Utilities
-
-Border-noise masking
-
-Refined Lee speckle filter
-
-Ellipsoidal RTC
-
-SAR indices + GLCM textures
-
-Export seasonal mosaics
-
-Output: seasonal multi-band SAR feature rasters.
+**Output:** seasonal multi-band SAR feature rasters.
 
 2️⃣ Prepare feature rasters
 ```bash
-   python scripts/00_prepare_feature_rasters.py
-   ```
+python scripts/00_prepare_feature_rasters.py
+```
