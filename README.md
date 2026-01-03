@@ -171,5 +171,5 @@ results/
 
 ## 🙏 Attribution & Credits
 Portions of SAR preprocessing draw on concepts from:
-> **Sentinel-1 SAR Backscatter Analysis Ready Data (ARD)** framework by Mullissa et al. (2021).   
+> **Sentinel-1 SAR Backscatter Analysis Ready Data (ARD)** framework by Mullissa et al. (2021). [https://doi.org/10.3390/rs13101954](https://doi.org/10.3390/rs13101954)   
 > *Original repository:* [https://github.com/adugnag/gee_s1_ard](https://github.com/adugnag/gee_s1_ard)
