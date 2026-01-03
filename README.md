@@ -12,9 +12,9 @@ This repository contains all the scripts, environment requirements, and instruct
 - **Robust Validation:** Implementation of Leave-One-Region-Out (LORO) cross-validation to ensure spatial independence.
 - **Model Benchmarking:** Systematic comparison of Random Forest (RF), Support Vector Machine (SVM), and Extreme Gradient Boosting (XGBoost).
 - **Explainable AI:** Global feature importance analysis using SHAP (TreeExplainer).
-- **Wall-to-Wall Mapping:** Scalable pixel-wise classification for floodplain monitoring (2016, 2018, 2025).
+- **Wall-to-Wall Mapping:** Scalable pixel-wise classification for floodplain monitoring (2025).
 
-> **Note:** The preprocessing workflow builds upon the **Sentinel-1 SAR Backscatter Analysis Ready Data (ARD)** framework by Mullissa et al. (2021).  
+> **Note:** The sentinel-1 preprocessing workflow builds upon the **Sentinel-1 SAR Backscatter Analysis Ready Data (ARD)** framework by Mullissa et al. (2021).  
 > *Reference:* [https://github.com/adugnag/gee_s1_ard](https://github.com/adugnag/gee_s1_ard)
 
 ---
@@ -71,19 +71,23 @@ Run scripts inside ```/gee``` in order:
 - Export seasonal mosaics
 
 **Output:** seasonal multi-band SAR feature rasters.
+```
+S1_WPE_FEATURES_{SEASON}_{YEAR}.tif
+```
 
-2️⃣ Prepare feature rasters
+2️⃣ **Prepare feature rasters**
 ```bash
 python scripts/00_prepare_feature_rasters.py
 ```
+Mosaics tiles, clips wetlands, fixes band names.
 
-3️⃣ Extract polygon training features
+3️⃣ **Extract polygon training features**
 ```bash
 python scripts/01_extract_training_features.py
 ```
 Produces LOPO-ready tables.
 
-4️⃣ Feature ablation & model benchmarking
+4️⃣ **Feature ablation & model benchmarking**
 ```bash
 python scripts/02_model_ablation_experiments.py
 ```
@@ -101,17 +105,17 @@ Benchmarks:
 
 Across **RF / SVM / XGB**.
 
-5️⃣ SHAP feature importance
+5️⃣ **SHAP feature importance**
 ```bash
 python scripts/03_feature_importance_shap.py
 ```
 
-6️⃣ Train final mapping models
+6️⃣ **Train final mapping models**
 ```bash
 python scripts/04_train_final_models_for_mapping.py
 ```
 
-7️⃣ Build yearly stacks
+7️⃣ **Build yearly stacks**
 ```bash
 python scripts/05_build_yearly_stacks.py
 ```
