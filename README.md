@@ -48,7 +48,7 @@ benchmarking-sentinel1-sar-features/
 
 ## ⚙️ Installation
 ```bash
-git clone https://github.com/YOURNAME/benchmarking-sentinel1-sar-features.git
+git clone https://github.com/abbi776/benchmarking-sentinel1-sar-features.git
 cd benchmarking-sentinel1-sar-features
 
 python -m venv venv
@@ -59,3 +59,26 @@ pip install -r requirements.txt
 ```
 
 ---
+## 🚀 Pipeline Steps
+1️⃣ Sentinel-1 preprocessing (Google Earth Engine)
+
+Run scripts inside /gee in order:
+
+Utilities
+
+Border-noise masking
+
+Refined Lee speckle filter
+
+Ellipsoidal RTC
+
+SAR indices + GLCM textures
+
+Export seasonal mosaics
+
+Output: seasonal multi-band SAR feature rasters.
+
+2️⃣ Prepare feature rasters
+```bash
+   python scripts/00_prepare_feature_rasters.py
+   ```
