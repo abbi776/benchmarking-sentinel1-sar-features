@@ -8,6 +8,19 @@
  */
 
 /**
+ * Adapted from:
+ * A. Mullissa et al. (2021),
+ * "Sentinel-1 SAR Backscatter Analysis Ready Data Preparation in Google Earth Engine"
+ * Remote Sensing 13(10), 1954. doi:10.3390/rs13101954
+ *
+ * Original Refined-Lee implementation:
+ * https://github.com/adugnag/gee_s1_ard
+ *
+ * Filter structure and directional statistics follow the ARD reference,
+ * with modifications for WPE context, band handling, and gamma-0 workflow.
+ */
+
+/**
  * Masks pixels based on the 'angle' band to remove swath edge artifacts.
  * * @param {ee.Image} image - Sentinel-1 image (must contain 'angle' band).
  * @param {number} [minDeg=30.63993] - Minimum valid angle.
