@@ -1,4 +1,4 @@
-# Benchmarking Sentinel-1 SAR Features for Floodplain Woody Vegetation Classification
+# Benchmarking Sentinel-1 SAR Features for Woody Plant Encroachment Mapping
 
 Open-source framework for benchmarking Sentinel-1 SAR features and applying them to woody plant encroachment (WPE) mapping in floodplain wetlands using **multi-seasonal SAR backscatter, polarization indices, texture features, and machine learning (RF, SVM, XGBoost)**.
 
