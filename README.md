@@ -62,7 +62,7 @@ pip install -r requirements.txt
 ## 🚀 Pipeline Steps
 1️⃣ Sentinel-1 preprocessing (Google Earth Engine)
 
-Run scripts inside ```bash/gee``` in order:
+Run scripts inside ```/gee``` in order:
 - Utilities
 - Border-noise masking
 - Refined Lee speckle filter
